@@ -1,5 +1,5 @@
 getwd()
-setwd("/Users/shawnrain/Desktop/Final_year_project/volcano plot")
+setwd(" ")
 df<-read.csv("wt_vs_cyc8.csv",header=T,
          stringsAsFactors = F)
 head(df)
