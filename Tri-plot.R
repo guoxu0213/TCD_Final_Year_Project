@@ -14,7 +14,7 @@ setwd("/Users/shawnrain/Desktop/Final_year_project/scatterplot")
 df<-read.csv("total_genes.csv",header=T,
              stringsAsFactors = F)
 
-## Select the columns and reorder the data if needed
+## Select the columns and reorder the data
 df <- select(df,c("cyc8","tup1","tup1.cyc8"))
 
 ## Reformat the data for ggplot
@@ -25,7 +25,7 @@ plotData <- gather(df,
                    factor_key = TRUE) %>%
   filter(value != "") 
 
-## And plot the data
+## plot the data
 ggplot(plotData, aes(x = condition, y = value, fill = condition, color = condition)) +
   ggtitle("total downregulated genes") +
   ylab("Log2Flod Change") +
